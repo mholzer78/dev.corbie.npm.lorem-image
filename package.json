@@ -12,9 +12,25 @@
         "local-release": "changeset version && changeset publish",
         "prepublishOnly": "npm run ci"
     },
-    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mholzer78/dev.corbie.npm.lorem-image.git"
+    },
+    "keywords": [
+        "placehodler image",
+        "lorem image"
+    ],
+    "bugs": {
+        "url": "https://github.com/mholzer78/dev.corbie.npm.lorem-image/issues"
+    },
+    "homepage": "https://corbie.dev",
     "author": "Michel Holzer @ corbie.dev",
     "license": "ISC",
+    "files": [
+        "dist"
+    ],
+    "type": "module",
+    "main": "dist/index.js",
     "devDependencies": {
         "@changesets/cli": "^2.29.7",
         "prettier": "^3.6.2",
