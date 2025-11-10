@@ -41,7 +41,7 @@
 
 ## About The Project
 
-You might or might not know about <a href="https://corbie.dev">https://corbie.dev</a> but one thing you can do there, is to convert colors from one space to another. And here we go with that. I've taken the logic out and put it into an NPM package for you to use.
+You might or might not know about <a href="https://corbie.dev">https://corbie.dev</a> but one thing you can do there, is to create placehodler images. And here we go with that. I've taken the logic out and put it into an NPM package for you to use.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
