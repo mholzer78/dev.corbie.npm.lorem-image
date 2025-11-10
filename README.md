@@ -69,9 +69,9 @@ cbLoremImage.svg(1200, 800, '#FFdd01');
 
 ### What comes in and what comes out?
 
-| param1         | param2          | param3             |
-| -------------- | --------------- | ------------------ |
-| width (number) | height (number) | color (hex string) |
+| param1         | param2          | param3             | output             |
+| -------------- | --------------- | ------------------ | ------------------ |
+| width (number) | height (number) | color (hex string) | data:image/svg+xml |
 
 > **_NOTE:_** For the color the leading # (hash) is mandatory - at least for now
 
