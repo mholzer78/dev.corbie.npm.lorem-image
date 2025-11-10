@@ -1,40 +1,40 @@
 {
-    "name": "@corbie.dev/lorem-image",
-    "version": "0.0.1",
-    "description": "Create a placehodler image with custom color and dimensions",
-    "scripts": {
-        "build": "tsc",
-        "ci": "npm run build && npm run check-format && npm run test",
-        "format": "prettier --write .",
-        "check-format": "prettier --check .",
-        "test": "vitest run",
-        "dev": "vitest",
-        "local-release": "changeset version && changeset publish",
-        "prepublishOnly": "npm run ci"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/mholzer78/dev.corbie.npm.lorem-image.git"
-    },
-    "keywords": [
-        "placehodler image",
-        "lorem image"
-    ],
-    "bugs": {
-        "url": "https://github.com/mholzer78/dev.corbie.npm.lorem-image/issues"
-    },
-    "homepage": "https://corbie.dev",
-    "author": "Michel Holzer @ corbie.dev",
-    "license": "ISC",
-    "files": [
-        "dist"
-    ],
-    "type": "module",
-    "main": "dist/index.js",
-    "devDependencies": {
-        "@changesets/cli": "^2.29.7",
-        "prettier": "^3.6.2",
-        "typescript": "^5.9.3",
-        "vitest": "^4.0.7"
-    }
+  "name": "@corbie.dev/lorem-image",
+  "version": "0.0.2",
+  "description": "Create a placehodler image with custom color and dimensions",
+  "scripts": {
+    "build": "tsc",
+    "ci": "npm run build && npm run check-format && npm run test",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "test": "vitest run",
+    "dev": "vitest",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "npm run ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mholzer78/dev.corbie.npm.lorem-image.git"
+  },
+  "keywords": [
+    "placehodler image",
+    "lorem image"
+  ],
+  "bugs": {
+    "url": "https://github.com/mholzer78/dev.corbie.npm.lorem-image/issues"
+  },
+  "homepage": "https://corbie.dev",
+  "author": "Michel Holzer @ corbie.dev",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.7"
+  }
 }

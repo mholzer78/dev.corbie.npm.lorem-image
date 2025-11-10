@@ -18,11 +18,12 @@ class CbLoremImage {
       x: 12,
       y: 15,
     };
-console.log(this.textColor);
     let upperLineChars = this.width.toString().split('');
     let lowerLineChars = this.height.toString().split('');
-    let upperMargin = charDimesions.x * 0.5 * upperLineChars.length - charDimesions.x / 2;
-    let lowerMargin = charDimesions.x * 0.5 * lowerLineChars.length - charDimesions.x / 2;
+    let upperMargin =
+      charDimesions.x * 0.5 * upperLineChars.length - charDimesions.x / 2;
+    let lowerMargin =
+      charDimesions.x * 0.5 * lowerLineChars.length - charDimesions.x / 2;
     let upperLine = '';
     let lowerLine = '';
     for (const [index, char] of Object.entries(upperLineChars)) {
@@ -86,10 +87,9 @@ console.log(this.textColor);
                 </g>
             </g>
 
-            <svg x='${Math.max(this.width * 0.9, this.width - 10) - this.corbie.width}' y='${Math.max(this.height * 0.9, this.height - 10)- this.corbie.height}' width='${this.corbie.width}' height='${this.corbie.height}' viewBox='0 0 550 640'><g stroke='#000' stroke-width='10'><g fill='#444'><circle cx='270' cy='370' r='250'/><circle cx='270' cy='220' r='200'/></g><g fill='#fff'><circle cx='195' cy='175' r='70'/><circle cx='345' cy='175' r='70'/></g></g><circle cx='195' cy='175' r='40'/><circle cx='345' cy='175' r='40'/><path d='m145 370c0-175 250-175 250 0l-125 250z' fill='#ffd801' stroke='#000' stroke-linejoin='round' stroke-width='10'/></svg>
+            <svg x='${Math.max(this.width * 0.9, this.width - 10) - this.corbie.width}' y='${Math.max(this.height * 0.9, this.height - 10) - this.corbie.height}' width='${this.corbie.width}' height='${this.corbie.height}' viewBox='0 0 550 640'><g stroke='#000' stroke-width='10'><g fill='#444'><circle cx='270' cy='370' r='250'/><circle cx='270' cy='220' r='200'/></g><g fill='#fff'><circle cx='195' cy='175' r='70'/><circle cx='345' cy='175' r='70'/></g></g><circle cx='195' cy='175' r='40'/><circle cx='345' cy='175' r='40'/><path d='m145 370c0-175 250-175 250 0l-125 250z' fill='#ffd801' stroke='#000' stroke-linejoin='round' stroke-width='10'/></svg>
         </svg>
         `;
-        console.log(Math.max(this.width * 0.9, this.width - 10),Math.max(this.height * 0.9, this.height - 10));
     const encodedSvg = encodeURIComponent(svgString)
       .replace(/'/g, '%27')
       .replace(/"/g, '%22');
