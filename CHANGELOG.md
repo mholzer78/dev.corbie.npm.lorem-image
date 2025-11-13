@@ -1,5 +1,11 @@
 # @corbie.dev/lorem-image
 
+## 0.0.4
+
+### Patch Changes
+
+- 49d7d61: experimental version
+
 ## 0.0.3
 
 ### Patch Changes
