@@ -57,21 +57,27 @@ npm i @corbie.dev/lorem-image
 import cbLoremImage from '@corbie.dev/lorem-image';
 ```
 
-The prefix cb is short for corbie to prevent clashes with other convert libaries that you might use. But the name is up to you and cbLoremImage is only an example usage.
+The prefix cb is short for corbie to prevent clashes with other convert libaries that you might use. But the name is up to you and cbLoremImage is only an example usage. If you can't decide on any background you can simply pass "random" instead of a color and you'll receive a random color background like this:
 
 With the import in place you can already use the libary like this:
 
 ```javascript
-cbLoremImage.svg(1200, 800, '#FFdd01');
+cbLoremImage.svg(1200, 800, '#FFdd01'); // returns image 1200 by 800px using the default background
+cbLoremImage.svg(600, 200); // returns image using the default background
+cbLoremImage.svg(800, '#FFdd01'); // returns a square image 800 by 800px with #ffdd01 as background
+cbLoremImage.svg(900); // returns a square image 900 by 900px using the default background
+cbLoremImage.svg(400, 300, 'random'); // returns an image 400px by 300px with a random* background
+cbLoremImage.svg(1600, 'random'); // returns a square image 1600 by 1600px with a random* background
 ```
 
-> **_NOTE:_** cbLoremImage is still an example but if you change its name in the import you need to use that name here aswell
+> **_NOTE:_** cbLoremImage is still an example but if you change its name in the import you need to use that name here aswell  
+> \*) random is limited to a couple of colors I chose to be fitting, so no colors that commonly would be seen as unfitting will be generated
 
 ### What comes in and what comes out?
 
-| param1         | param2          | param3             | output             |
-| -------------- | --------------- | ------------------ | ------------------ |
-| width (number) | height (number) | color (hex string) | data:image/svg+xml |
+| param1         | param2 (optional) | param3 (optional)  | output             |
+| -------------- | ----------------- | ------------------ | ------------------ |
+| width (number) | height (number)   | color (hex string) | data:image/svg+xml |
 
 > **_NOTE:_** For the color the leading # (hash) is mandatory - at least for now
 
