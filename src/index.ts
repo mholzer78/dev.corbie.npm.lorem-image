@@ -74,6 +74,9 @@ class CbLoremImage {
     let err = 0;
     let errMsg = '';
     value = value.toString();
+    if (value === 'random') {
+      return;
+    }
     value = value.replace(/^#/, '');
     if (value.length !== 6) {
       throw new Error('Wrong input format. Should be: (#)abcdef');
