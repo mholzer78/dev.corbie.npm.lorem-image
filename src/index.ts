@@ -1,4 +1,7 @@
-type InputType = [number, number| string | undefined, string | undefined];
+type InputType =
+  | [number]
+  | [number, number | string]
+  | [number, number | string, number | string];
 
 class CbLoremImage {
   height = 0;
@@ -12,12 +15,11 @@ class CbLoremImage {
   svg(...args: InputType): string {
     this.processArgs(...args);
     const svgXml = this.generateSvg();
-    const encodedSvg = encodeURIComponent(svgXml)
-      .replace(/'/g, '%27')
-      .replace(/"/g, '%22');
-    const svgDataUrl = `data:image/svg+xml,${encodedSvg}`;
 
-    return svgDataUrl;
+    const svgBlob = new Blob([svgXml], { type: 'image/svg+xml' });
+    const svgUrl = URL.createObjectURL(svgBlob);
+
+    return svgUrl;
   }
   svgAsXml(...args: InputType): string {
     this.processArgs(...args);
@@ -49,15 +51,45 @@ class CbLoremImage {
       this.height = args[1];
       this.color = args[2];
     }
+
+    this.validateNumber(this.width);
+    this.validateNumber(this.height);
+    this.validateColor(this.color);
   }
+
+  validateNumber = (value: number) => {
+    if (
+      isNaN(value) ||
+      value <= 0 ||
+      value > 3840 ||
+      !Number.isInteger(value)
+    ) {
+      throw new Error(
+        'Width and Height should be positive integers and maximum 3840.',
+      );
+    }
+  };
+
+  validateColor = (value: string) => {
+    let err = 0;
+    let errMsg = '';
+    value = value.toString();
+    value = value.replace(/^#/, '');
+    if (value.length !== 6) {
+      throw new Error('Wrong input format. Should be: (#)abcdef');
+    } else if (!value.match(/[0-9A-Fa-f]{6}/g)) {
+      throw new Error(
+        'Wrong input format. Each item should be between 0 and f',
+      );
+    }
+  };
 
   generateSvg(): string {
     if (this.color === 'random') {
-        this.color = this.getRandomColor();
-    } else    if (!this.color.startsWith('#')) {
-        this.color = '#' + this.color;
+      this.color = this.getRandomColor();
+    } else if (!this.color.startsWith('#')) {
+      this.color = '#' + this.color;
     }
-    // TBD VALIDATION !!!
 
     this.setTextColor();
     this.setTextScale();
