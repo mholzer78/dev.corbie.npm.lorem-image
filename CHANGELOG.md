@@ -1,5 +1,11 @@
 # @corbie.dev/lorem-image
 
+## 1.0.0
+
+### Major Changes
+
+- 938f4c1: enhanced testing and bugfixing
+
 ## 0.0.4
 
 ### Patch Changes

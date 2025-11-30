@@ -1,6 +1,6 @@
 {
   "name": "@corbie.dev/lorem-image",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Create a placehodler image with custom color and dimensions",
   "scripts": {
     "build": "tsc",
