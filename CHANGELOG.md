@@ -1,5 +1,11 @@
 # @corbie.dev/lorem-image
 
+## 1.0.1
+
+### Patch Changes
+
+- a631cc7: fixed random function
+
 ## 1.0.0
 
 ### Major Changes
